@@ -136,4 +136,106 @@
       <part>id</part>
     </key>
   </table>
+  <table x="893" y="444" name="customers">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="first_name" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="last_name" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="country" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="email" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="562" y="398" name="invoice_lines">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="track_id" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+      <relation table="tracks" row="id" />
+    </row>
+    <row name="invoice_id" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+      <relation table="invoices" row="id" />
+    </row>
+    <row name="unit_price" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="755" y="358" name="invoices">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="customer_id" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+      <relation table="customers" row="id" />
+    </row>
+    <row name="invoice_date" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="total" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="576" y="160" name="playlist_tracks">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="playlist_id" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+      <relation table="playlists" row="id" />
+    </row>
+    <row name="track_id" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+      <relation table="tracks" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="807" y="139" name="playlists">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>TINYINT</datatype>
+      <default>NULL</default>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
 </sql>
